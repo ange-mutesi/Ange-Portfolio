@@ -1,0 +1,334 @@
+/* Importing fonts */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,700;1,6..12,300;1,6..12,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300;400&family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;600;800&family=Rock+3D&family=Secular+One&display=swap");
+
+/* Set background color for the entire page */
+body {
+  background-color: #F3EEE7;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  height: 80px; 
+  padding: 0 20px; 
+  top: 0;
+  position: sticky;
+  background-color: #F3EEE7; 
+  z-index: 1000; 
+}
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgb(104, 104, 104);
+}
+.navbar-links li {
+  margin-left: 2rem;
+}
+.navbar-links a {
+  text-decoration: none;
+  color: #333;
+  font-family: "Nunito Sans", sans-serif;
+}
+.navbar-links a:hover {
+  color: #F06040;
+  text-decoration: underline;
+}
+.navbar-links a:active {
+  color: #F06040;
+}
+.logo img {
+  height: 60px; 
+  width: auto;  
+}
+
+/* Menu toggle button */
+.menu-toggle {
+  display: none; 
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+  .navbar-links {
+    display: none; 
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+    width: 100%; 
+    background-color: #F3EEE7; 
+    padding: 1rem 0;
+  }
+  .navbar-links.active {
+    display: flex; 
+  }
+  .navbar-links li {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+    width: 100%; 
+  }
+  .navbar-links a {
+    width: 100%; 
+    padding: 1rem;
+    text-align: left; 
+  }
+  .menu-toggle {
+    display: block; 
+  }
+}
+
+/* Progress Bar */
+:root {
+  --colorProgress: #F06040; 
+}
+
+.progress {
+  background-color: var(--colorProgress);
+  height: 3px;
+  position: fixed;
+  inset: 0;
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #F06040;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  line-height: 24px; 
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #e54b2a;
+}
+
+/* Footer styles */
+.footer {
+  margin-top: 6rem;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-line {
+  margin: 10px auto;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.title-footer {
+  font-size: 16px;
+  text-align: right;
+}
+
+.text-small {
+  font-weight: 300;
+  bottom: 0;
+  color: #776b5d;
+}
+
+/* Simac project styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  width: 80%;
+  margin: auto;
+}
+
+.left-column, .right-column {
+  width: 100%;
+  padding: 20px;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.project-description {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #444;
+  text-align: center;
+}
+
+.cover-image,
+.video-insertion {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.duration, .role, .sub-heading, .next-link {
+  display: flex;
+  justify-content: center;
+}
+
+.time-project, .paragraph {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+.role, .sub-heading {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.heading-project {
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.line-separation {
+  height: 3px;
+  width: 100%;
+  background-color: #ebe3d5;
+  margin: 20px 0;
+}
+
+.paragraph.concept {
+  text-align: center;
+  font-style: italic;
+  color: #b0a695;
+}
+
+.next-link {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #776b5d;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+
+.next-link:hover {
+  font-weight: 900;
+}
+
+/* General project image styling */
+.project-image {
+    max-width: 80%; 
+    height: auto; 
+    margin: 20px auto; 
+    display: block; 
+}
+
+/* Specific rules for the sticky note and iteration images */
+.project-image-sticky-notes,
+.project-image-iteration {
+    width: 80%; 
+    height: 600px; 
+    object-fit: cover; 
+    margin: 20px auto; 
+    display: block; 
+}
+
+.video-insertion {
+    max-width: 80%; 
+    height: auto; 
+    margin: 20px auto; 
+    display: block; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+    .project-title {
+        font-size: 2rem;
+    }
+    .project-description {
+        font-size: 1rem;
+    }
+    .heading-project {
+        font-size: 1.2rem;
+    }
+    .project-image-sticky-notes,
+    .project-image-iteration {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    .project-title {
+        font-size: 1.5rem;
+    }
+    .project-description {
+        font-size: 0.9rem;
+    }
+    .heading-project {
+        font-size: 1rem;
+    }
+    .project-image-sticky-notes,
+    .project-image-iteration {
+        height: 300px;
+    }
+    .left-column, .right-column {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+    .project-title {
+        font-size: 1.2rem;
+    }
+    .project-description {
+        font-size: 0.8rem;
+    }
+    .heading-project {
+        font-size: 0.9rem;
+    }
+    .project-image-sticky-notes,
+    .project-image-iteration {
+        height: 200px;
+    }
+}
+

@@ -1,0 +1,559 @@
+/* Importing fonts */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,700;1,6..12,300;1,6..12,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+/* Set background color for the entire page */
+body {
+  background-color: #F3EEE7;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  height: 80px; 
+  padding: 0 20px; 
+  top: 0;
+  position: sticky;
+  background-color: #F3EEE7; 
+  z-index: 1000; 
+}
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgb(104, 104, 104);
+}
+.navbar-links li {
+  margin-left: 2rem;
+}
+.navbar-links a {
+  text-decoration: none;
+  color: #333;
+  font-family: "Nunito Sans", sans-serif;
+}
+.navbar-links a:hover {
+  color: #F06040;
+  text-decoration: underline;
+}
+.navbar-links a:active {
+  color: #F06040;
+}
+
+.logo img {
+  height: 60px; 
+  width: auto;  
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+  .navbar-links {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+  .navbar-links li {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Hero section styles */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+}
+.hero-content {
+  text-align: center;
+}
+.hero-subtitle {
+  font-size: 60px;
+  font-family: "Poiret One", sans-serif;
+  color: #444;
+}
+.strike-text {
+  font-family: "Poiret One", sans-serif;
+}
+.italic-word {
+  color: #F06040;
+  font-family: "Playpen Sans", cursive;
+}
+.work-list {
+  font-size: 18px;
+  font-weight: 900;
+  font-style: italic;
+  font-family: "Playpen Sans";
+  text-align: center;
+}
+/* Animation for the new text */
+.intro-text {
+  font-size: 4em; 
+  font-weight: bold; 
+  font-family: "Poiret One", sans-serif;
+  color: #444;
+  opacity: 0; 
+  animation: fadeInUp 3s ease forwards; 
+  animation-delay: 1s; 
+}
+
+/* Typing animation */
+.typing-demo {
+  width: 100%;
+  opacity: 0; 
+  animation: typing 3s steps(22) 1.5s forwards, blink 0.5s step-end infinite alternate 4.5s forwards; 
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+  font-family: "Poiret One", sans-serif;
+  font-size: 3.5em; 
+  font-weight: bold; 
+  color: #444;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+
+@keyframes typing {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.scroll-downs {
+  display: flex;
+  margin: auto;
+  width: 34px;
+  height: 55px;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #333;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 20px;
+  border-radius: 25%;
+  background-color: #F06040; 
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}
+
+/* Project overview styling */
+.project-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+.project {
+  width: 60vh;
+  height: 50vh;
+  margin: 4rem;
+  justify-content: center;
+  position: relative; 
+}
+.bottom {
+  display: flex;
+  align-items: center; 
+  margin-top: 1rem; 
+}
+.button-work {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  width: 10rem; 
+  height: 2.2rem;
+  text-align: center;
+  border: 2px solid #272727;
+  text-decoration: none;
+  color: black;
+  padding: 0.4rem;
+  border-radius: 10px; 
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; 
+  margin-left: 2rem; 
+}
+.button-work::after {
+  content: " \2192";
+  display: inline-block;
+}
+.button-work:hover {
+  color: #F06040;
+  background-color: black;
+}
+.title {
+  background-color: #F3EEE7;
+  color: grey;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  margin-top: 0; 
+}
+.image-placement,
+.image-zenya {
+  object-fit: cover;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s, border-color 0.3s; 
+  background-color: #ffffff; 
+  border: 1px solid #ccc; 
+  padding: 10px; 
+  border-radius: 5px; 
+}
+.image-placement:hover,
+.image-zenya:hover {
+  transform: scale(1.05); 
+  border-color: #F06040; 
+  cursor: pointer;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* About area */
+.container {
+  display: flex;
+  margin: auto;
+  gap: 4rem;
+  height: 65vh;
+  width: 80%;
+  background-color: #f7f0e5;
+}
+.me {
+  margin-right: 2rem;
+  margin-left: 2rem;
+  justify-content: flex-end;
+  height: 50vh;
+  border: 3px solid #000; 
+  border-radius: 10px;
+  transition: transform 0.3s, border-color 0.3s; 
+}
+
+.me:hover {
+  transform: scale(1.05); 
+  border-color: #F06040; 
+  cursor: pointer; /
+}
+
+.description-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Ubuntu", sans-serif;
+}
+.resume-link {
+  text-decoration: underline;
+  color: #F06040;
+  font-weight: 500;
+  font-size: 18px;
+}
+.resume-link::after {
+  content: " \2192";
+  display: inline-block;
+  transform: rotate(-45deg);
+  
+}
+.resume-link {
+  transition: transform 0.3s, color 0.3s;
+}
+
+.resume-link:hover {
+  transform: scale(1.1); 
+  color: #D04936; 
+}
+
+/* Footer styles */
+.footer {
+  margin-top: 6rem;
+  padding: 20px;
+  text-align: center;
+}
+.footer-line {
+  margin: 10px auto;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+.title-footer {
+  font-size: 16px;
+  text-align: right;
+}
+.text-small {
+  font-weight: 300;
+  bottom: 0;
+  color: #776b5d;
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #F06040;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  line-height: 24px; 
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #e54b2a;
+}
+
+/* Style for the "My Work" title */
+.work-list {
+  font-family: "Montserrat", sans-serif; 
+  font-size: 3.5rem; 
+  font-weight: bold; 
+  font-style: normal; 
+  color: #444;
+  text-align: center;
+  margin: 2rem 0; 
+  transition: color 0.3s ease-in-out; 
+}
+
+.work-list:hover {
+  color: #F06040; 
+}
+
+
+/* General Styles for Smaller Screens */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.5rem;
+  }
+  .navbar-links {
+      display: none; 
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 1rem;
+      width: 100%; 
+      background-color: #F3EEE7; 
+      padding: 1rem 0;
+  }
+  .navbar-links.active {
+      display: flex; 
+  }
+  .navbar-links li {
+      margin: 0.5rem 0; 
+      width: 100%; 
+  }
+  .navbar-links a {
+      width: 100%; 
+      padding: 1rem;
+      text-align: left; 
+  }
+  .menu-toggle {
+      display: block; 
+      cursor: pointer;
+      font-size: 1.5rem;
+      padding: 1rem;
+  }
+  .hero {
+      height: auto;
+      padding: 2rem 1rem;
+  }
+  .hero-content h1 {
+      font-size: 2em;
+  }
+  .hero-content h3 {
+      font-size: 1.5em;
+  }
+  .container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      height: auto;
+      width: 95%;
+  }
+  .me {
+      margin: 0;
+      height: auto;
+      width: 80%;
+  }
+  .box-content {
+      width: 100%;
+      padding: 1rem;
+  }
+  .project-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .project {
+      width: 80%;
+      margin: 1rem 0;
+  }
+  .project img {
+      width: 100%;
+      height: auto; 
+      object-fit: cover;
+  }
+  .footer-content {
+      flex-direction: column;
+      text-align: center;
+  }
+  .footer-content .left-text, .footer-content .right-text {
+      margin: 1rem 0;
+  }
+}
+
+/* Specific Adjustments for Tablets */
+@media (max-width: 1024px) {
+  .navbar {
+      padding: 1rem;
+  }
+  .hero-content h1 {
+      font-size: 2.5em;
+  }
+  .hero-content h3 {
+      font-size: 2em;
+  }
+  .container {
+      width: 90%;
+  }
+  .me {
+      width: 60%;
+  }
+  .project {
+      width: 70%;
+      margin: 2rem 0;
+  }
+  .project img {
+      height: auto; 
+  }
+  .footer-content {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+}
+
+/* Hover Effects */
+.resume-link {
+  text-decoration: underline;
+  color: #F06040;
+  font-weight: 500;
+  font-size: 18px;
+  transition: transform 0.3s, color 0.3s; 
+}
+
+.resume-link:hover {
+  transform: scale(1.1); 
+  color: #D04936; 
+}
+
+.image-placement,
+.image-zenya {
+  object-fit: cover;
+  margin: auto;
+  width: 100%;
+  height: 100%; 
+  transition: transform 0.3s, border-color 0.3s; 
+  background-color: #ffffff; 
+  border: 1px solid #ccc; 
+  padding: 10px; 
+  border-radius: 5px; 
+}
+
+.image-placement:hover,
+.image-zenya:hover {
+  transform: scale(1.05); 
+  border-color: #F06040; 
+  cursor: pointer;
+}
+
+/* Menu Toggle */
+.menu-toggle {
+  display: none; 
+
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block; 
+  }
+}
+}
+
+.disabled-link {
+  pointer-events: none; /* Disable click events */
+  color: #ccc; /* Change the color to indicate it is disabled */
+  text-decoration: none; /* Remove underline */
+  cursor: default; /* Change cursor to default */
+}
+
+.disabled-link:hover {
+  color: #ccc; /* Ensure the hover state is also styled correctly */
+  text-decoration: none;
+}
