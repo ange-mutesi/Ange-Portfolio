@@ -248,8 +248,9 @@ body {
 
 /* General project image styling */
 .project-image {
-    max-width: 80%; 
-    height: auto; 
+    width: 720px;  
+    height: 380px; 
+    object-fit: cover; 
     margin: 20px auto; 
     display: block; 
 }
@@ -258,6 +259,15 @@ body {
 .project-image-sticky-notes,
 .project-image-iteration {
     width: 80%; 
+    height: 600px; 
+    object-fit: cover; 
+    margin: 20px auto; 
+    display: block; 
+}
+
+.project-image-designthinking
+ {
+    width: 85%; 
     height: 600px; 
     object-fit: cover; 
     margin: 20px auto; 
